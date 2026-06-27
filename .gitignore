@@ -1,0 +1,87 @@
+# ===========================================
+# Project-wide .gitignore
+# ===========================================
+
+# Backup & temporary files (manual backups should never be committed)
+*.backup
+*.bak
+*.old
+*.orig
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+*.code-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Environment files (should use .env.example)
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# ===========================================
+# Backend (Laravel) specific - see backend/.gitignore for more
+# ===========================================
+/backend/vendor/
+/backend/node_modules/
+/backend/.env
+/backend/storage/*.key
+/backend/storage/logs/*.log
+
+# ===========================================
+# Frontend (Vue/Vite) specific
+# ===========================================
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.env.local
+
+# ===========================================
+# Mobile (Flutter) specific  
+# ===========================================
+/mobile/.dart_tool/
+/mobile/.packages
+/mobile/build/
+/mobile/.flutter-plugins
+/mobile/.flutter-plugins-dependencies
+
+# ===========================================
+# Test & Debug artifacts
+# ===========================================
+coverage/
+.nyc_output/
+*.test.log
+debug_*.php
+test_*.log
+
+# ===========================================
+# Debug files - NEVER deploy to production
+# ===========================================
+**/debug-*.js
+**/debug-*.html
+**/test-*.html
+**/clear-session.html
+debug_*.js
+debug_*.html
+test_debug_*.*

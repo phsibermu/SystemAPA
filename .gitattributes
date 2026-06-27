@@ -1,0 +1,47 @@
+# =============================================================
+# Git Export Ignore - Files excluded from `git archive`
+# These files will NOT be included in production deployments
+# =============================================================
+
+# Debug scripts - SECURITY RISK
+backend/debug_*.php export-ignore
+backend/diagnose_*.php export-ignore
+backend/fix_*.php export-ignore
+backend/test_*.php export-ignore
+backend/check_*.php export-ignore
+backend/audit_*.php export-ignore
+
+# Token/credential files - CRITICAL SECURITY RISK
+backend/get_operator_token.php export-ignore
+backend/test_token.txt export-ignore
+backend/KREDENSIAL*.md export-ignore
+backend/CREDENTIALS*.md export-ignore
+
+# Import/generate scripts
+backend/do_import_*.php export-ignore
+backend/generate_*.php export-ignore
+
+# Development documentation
+backend/*.md export-ignore
+docs/ export-ignore
+tests/ export-ignore
+
+# Development configs
+.env export-ignore
+.env.* export-ignore
+!.env.example
+
+# IDE/Editor files
+.idea/ export-ignore
+.vscode/ export-ignore
+*.swp export-ignore
+*.swo export-ignore
+
+# Build artifacts
+node_modules/ export-ignore
+backend/node_modules/ export-ignore
+frontend/node_modules/ export-ignore
+
+# Log files
+*.log export-ignore
+backend/storage/logs/*.log export-ignore
